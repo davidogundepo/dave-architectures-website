@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-display), "Bebas Neue", sans-serif;
+  --font-editorial: var(--font-editorial), "DM Serif Display", serif;
+  --font-ui: var(--font-ui), "Space Mono", monospace;
+}
+
+:root {
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  --space-2xl: 12rem;
+  --space-3xl: 16rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* Backgrounds */
+  --bg-void:     #080808;  /* Primary dark — not pure black */
+  --bg-deep:     #0f0f0f;  /* Cards, panels */
+  --bg-surface:  #161616;  /* Elevated surfaces */
+  --bg-muted:    #1e1e1e;  /* Borders, dividers */
+
+  /* Text */
+  --text-primary:   #f0ede8;  /* Warm white — NOT pure white */
+  --text-secondary: #888885;  /* Labels, metadata */
+  --text-ghost:     #333330;  /* Very subtle / disabled */
+
+  /* Accent */
+  --accent-red:     #c8102e;  /* Nouvelle red — used sparingly */
+  --accent-red-dim: #7a0a1a;  /* Dimmed red for backgrounds */
+
+  /* Glassmorphism */
+  --glass-bg:     rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur:   24px;
+
+  /* Grain */
+  --noise-opacity: 0.035;
+  
+  --page-bg: var(--bg-void);
+}
+
+.theme-void    { --page-bg: var(--bg-void); }
+.theme-warm    { --page-bg: #0d0b09; }      /* warm dark */
+.theme-cool    { --page-bg: #080c10; }      /* cool dark */
+.theme-red     { --page-bg: #120006; }      /* red-tinted dark */
+
+@layer base {
+  *, *::before, *::after { 
+    /* cursor: none !important; */
+  }
+
+  body {
+    background-color: var(--page-bg);
+    color: var(--text-primary);
+    overflow-x: hidden;
+  }
+
+  /* Noise texture via SVG filter */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 256px 256px;
+    mix-blend-mode: overlay;
+  }
+}
+
+@layer components {
+  /* Typography Scale */
+  .text-hero    { font-size: clamp(5rem, 15vw, 18rem); line-height: 0.9; letter-spacing: -0.02em; }
+  .text-title   { font-size: clamp(3rem, 8vw, 9rem);  line-height: 0.95; }
+  .text-heading { font-size: clamp(1.8rem, 4vw, 4.5rem); line-height: 1.1; }
+  .text-subhead { font-size: clamp(1rem, 2vw, 1.6rem); line-height: 1.4; }
+  .text-body    { font-size: clamp(0.95rem, 1.2vw, 1.15rem); line-height: 1.7; }
+  .text-label   { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
