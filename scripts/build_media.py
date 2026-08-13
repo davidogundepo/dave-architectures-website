@@ -33,10 +33,13 @@ PREVIEW_DIR = os.path.join(DERIV_DIR, "preview")
 WEB_DIR = os.path.join(DERIV_DIR, "web")
 CAPTIONS = os.path.join(ROOT, "lib", "captions.json")
 OVERRIDES = os.path.join(ROOT, "lib", "captions.overrides.json")
+CROPS = os.path.join(ROOT, "lib", "crops.json")
 
 FORCE = "--force" in sys.argv
 POSTERS_ONLY = "--posters" in sys.argv
 CAPTIONS_ONLY = "--captions" in sys.argv
+# Rebuild only the clips that have black bars to crop away.
+ONLY_CROPPED = "--only-cropped" in sys.argv
 
 PREVIEW_START = 4.0   # skip the burned-in title card
 PREVIEW_LEN = 10.0
@@ -269,24 +272,41 @@ def run(cmd: list[str]) -> bool:
     return subprocess.run(cmd, capture_output=True).returncode == 0
 
 
+def fit(crop: dict | None, w: int, h: int) -> str:
+    """
+    Filter chain that lands on exactly w×h with no black edges.
+
+    Any bars found by detect_letterbox.py are cropped off first, then the
+    picture is scaled to *cover* the target box and centre-cropped — so a source
+    whose aspect shifted slightly after de-barring still fills the frame.
+    """
+    chain = []
+    if crop:
+        chain.append(f"crop={crop['w']}:{crop['h']}:{crop['x']}:{crop['y']}")
+    chain.append(f"scale={w}:{h}:force_original_aspect_ratio=increase")
+    chain.append(f"crop={w}:{h}")
+    return ",".join(chain)
+
+
 def build(job: dict) -> dict | None:
     slug, src, index = job["slug"], job["src"], job["index"]
     portrait = index >= 3
+    crop = job.get("crop")
 
     poster = os.path.join(POSTER_DIR, f"{slug}.jpg")
     preview = os.path.join(PREVIEW_DIR, f"{slug}.mp4")
     web = os.path.join(WEB_DIR, f"{slug}.mp4")
 
-    poster_scale = "720:-2" if portrait else "1280:-2"
-    preview_scale = "480:-2" if portrait else "854:-2"
-    web_scale = "720:-2" if portrait else "1280:-2"
+    poster_scale = fit(crop, 720, 1280) if portrait else fit(crop, 1280, 720)
+    preview_scale = fit(crop, 480, 854) if portrait else fit(crop, 854, 480)
+    web_scale = fit(crop, 720, 1280) if portrait else fit(crop, 1280, 720)
 
     if FORCE or not os.path.exists(poster):
         # Let ffmpeg choose the most representative frame of the window rather
         # than a fixed timestamp — fixed stamps land mid-pan and come out smeared.
         run([
             "ffmpeg", "-y", "-v", "error", "-ss", str(PREVIEW_START), "-t", "6", "-i", src,
-            "-vf", f"thumbnail=n=120,scale={poster_scale}",
+            "-vf", f"thumbnail=n=120,{poster_scale}",
             "-frames:v", "1", "-q:v", "4", poster,
         ])
 
@@ -297,7 +317,7 @@ def build(job: dict) -> dict | None:
                 "-ss", str(PREVIEW_START), "-t", str(PREVIEW_LEN), "-i", src,
                 "-an", "-c:v", "libx264", "-preset", "veryfast", "-crf", "31",
                 "-maxrate", "700k", "-bufsize", "1400k",
-                "-vf", f"scale={preview_scale},fps=24",
+                "-vf", f"{preview_scale},fps=24",
                 "-pix_fmt", "yuv420p", "-profile:v", "main",
                 "-movflags", "+faststart", preview,
             ])
@@ -307,7 +327,7 @@ def build(job: dict) -> dict | None:
                 "ffmpeg", "-y", "-v", "error", "-i", src,
                 "-c:v", "libx264", "-preset", "fast", "-crf", "25",
                 "-maxrate", "2400k", "-bufsize", "4800k",
-                "-vf", f"scale={web_scale}",
+                "-vf", f"{web_scale}",
                 "-pix_fmt", "yuv420p", "-profile:v", "high",
                 "-c:a", "aac", "-b:a", "96k",
                 "-movflags", "+faststart", web,
@@ -330,6 +350,11 @@ def main():
     if os.path.exists(OVERRIDES):
         with open(OVERRIDES) as f:
             overrides = {k: v for k, v in json.load(f).items() if not k.startswith("_")}
+
+    crops = {}
+    if os.path.exists(CROPS):
+        with open(CROPS) as f:
+            crops = json.load(f)
 
     jobs, captions = [], {}
 
@@ -368,7 +393,11 @@ def main():
                 "slug": slug,
                 "index": index,
                 "src": os.path.join(clip_dir, master),
+                "crop": crops.get(slug),
             })
+
+    if ONLY_CROPPED:
+        jobs = [j for j in jobs if j["crop"]]
 
     with open(CAPTIONS, "w") as f:
         json.dump(dict(sorted(captions.items())), f, indent=2, ensure_ascii=False)

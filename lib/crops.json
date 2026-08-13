@@ -1,0 +1,479 @@
+{
+  "bayut-com-ae-1": {
+    "w": 2160,
+    "h": 1216,
+    "x": 200,
+    "y": 112,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 28.7
+  },
+  "bayut-com-ae-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "bayut-com-ae-3": {
+    "w": 1424,
+    "h": 2560,
+    "x": 8,
+    "y": 0,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.1
+  },
+  "bayut-com-ae-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "bayut-com-ae-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "christiesrealestate-com-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "christiesrealestate-com-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "christiesrealestate-com-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "christiesrealestate-com-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "christiesrealestate-com-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "coldwellbankerluxury-com-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "coldwellbankerluxury-com-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "coldwellbankerluxury-com-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "domain-com-au-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "domain-com-au-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "domain-com-au-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "mansionglobal-com-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "mansionglobal-com-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "mansionglobal-com-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "nigeriapropertycentre-com-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "nigeriapropertycentre-com-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "nigeriapropertycentre-com-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "nigeriapropertycentre-com-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "nigeriapropertycentre-com-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "pamgolding-co-za-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "pamgolding-co-za-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "pamgolding-co-za-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "pamgolding-co-za-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "pamgolding-co-za-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "propertyfinder-ae-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "propertyfinder-ae-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "propertyfinder-ae-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "propertyfinder-ae-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "propertyfinder-ae-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "realestate-com-au-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "realestate-com-au-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "realestate-com-au-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "realestate-com-au-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "rightmove-co-uk-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "rightmove-co-uk-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "savills-co-uk-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "savills-co-uk-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "savills-co-uk-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "savills-co-uk-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "sothebysrealty-com-eng-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "sothebysrealty-com-eng-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "sothebysrealty-com-eng-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "sothebysrealty-com-eng-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "zillow-com-us-1": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "zillow-com-us-2": {
+    "w": 2520,
+    "h": 1440,
+    "x": 20,
+    "y": 0,
+    "src_w": 2560,
+    "src_h": 1440,
+    "bars_pct": 1.6
+  },
+  "zillow-com-us-3": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "zillow-com-us-4": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  },
+  "zillow-com-us-5": {
+    "w": 1440,
+    "h": 2520,
+    "x": 0,
+    "y": 20,
+    "src_w": 1440,
+    "src_h": 2560,
+    "bars_pct": 1.6
+  }
+}

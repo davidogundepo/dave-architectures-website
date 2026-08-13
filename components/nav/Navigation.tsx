@@ -6,11 +6,11 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 
+// Contact is deliberately absent — "Start a film" is the route to it.
 const links = [
   { label: 'Work', href: '/work' },
   { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Navigation() {

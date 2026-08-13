@@ -13,12 +13,12 @@ const columns = [
     ],
   },
   {
-    heading: 'Formats',
+    heading: 'What we make',
     links: [
       { label: '16:9 listing film', href: '/services#listing-film' },
       { label: '9:16 social cuts', href: '/services#social-cuts' },
-      { label: 'Developer reels', href: '/services#developer' },
-      { label: 'Agent branding', href: '/services#agent' },
+      { label: 'Virtual staging', href: '/services#included' },
+      { label: 'Who we film for', href: '/services#who' },
     ],
   },
 ];
@@ -27,7 +27,7 @@ export default function Footer() {
   return (
     <footer className="bg-[var(--night)] pt-[clamp(4rem,9vh,7rem)] pb-10 text-[var(--on-night)]">
       <div className="shell">
-        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)_minmax(0,1fr)]">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1.5fr)_repeat(3,minmax(0,1fr))]">
           <div>
             <div className="flex items-center gap-3">
               <Image
@@ -52,7 +52,7 @@ export default function Footer() {
             <a
               href={`mailto:${SITE.email}`}
               data-cursor="Write"
-              className="display mt-8 inline-block text-[clamp(1.4rem,3vw,2.4rem)] leading-none underline decoration-[var(--accent)] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[var(--accent)]"
+              className="display mt-8 inline-block break-all text-[clamp(1.15rem,2.2vw,1.9rem)] leading-none underline decoration-[var(--accent)] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[var(--accent)]"
             >
               {SITE.email}
             </a>
@@ -75,6 +75,50 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+
+          {/* The rest of the group — separate businesses, separate sites. */}
+          <div>
+            <p className="label text-[var(--on-night-2)]">Also from us</p>
+            <ul className="mt-5 space-y-4">
+              {SITE.sister.map((site) =>
+                site.live ? (
+                  <li key={site.href}>
+                    <a
+                      href={site.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="group/sister block"
+                    >
+                      <span className="flex items-center gap-1.5 text-[var(--on-night)] transition-colors duration-300 group-hover/sister:text-[var(--accent)]">
+                        {site.label}
+                        <span
+                          aria-hidden
+                          className="text-[0.8em] transition-transform duration-300 group-hover/sister:translate-x-0.5 group-hover/sister:-translate-y-0.5"
+                        >
+                          ↗
+                        </span>
+                      </span>
+                      <span className="mt-0.5 block text-sm leading-snug text-[var(--on-night-2)]">
+                        {site.note}
+                      </span>
+                    </a>
+                  </li>
+                ) : (
+                  <li key={site.href}>
+                    <span className="flex items-center gap-2 text-[var(--on-night-2)]">
+                      {site.label}
+                      <span className="label rounded-full border border-[var(--line-night)] px-2 py-0.5 text-[0.55rem]">
+                        Soon
+                      </span>
+                    </span>
+                    <span className="mt-0.5 block text-sm leading-snug text-[var(--on-night-2)]/70">
+                      {site.note}
+                    </span>
+                  </li>
+                ),
+              )}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-16 flex flex-col gap-5 border-t border-[var(--line-night)] pt-7 sm:flex-row sm:items-center sm:justify-between">

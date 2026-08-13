@@ -130,7 +130,7 @@ export default function ServicesPage() {
         accentLine={2}
       />
 
-      <section className="pb-[clamp(4rem,9vh,7rem)]">
+      <section id="included" className="scroll-mt-24 pb-[clamp(4rem,9vh,7rem)]">
         <div className="shell grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
           {included.map((item, i) => (
             <Reveal key={item.title} delay={(i % 3) * 0.06}>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
       <Process />
 
       {/* Who it's for */}
-      <section className="bg-[var(--paper-2)] py-[clamp(4rem,9vh,7rem)]">
+      <section id="who" className="scroll-mt-24 bg-[var(--paper-2)] py-[clamp(4rem,9vh,7rem)]">
         <div className="shell">
           <Reveal>
             <h2 className="display t-section max-w-[14ch]">Who we film for</h2>
