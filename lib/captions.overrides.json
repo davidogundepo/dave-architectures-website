@@ -1,0 +1,193 @@
+{
+  "_comment": "Hand-checked additions merged over the auto-parsed listing titles by scripts/build_media.py. Property facts only — asking price, size, neighbourhood. Agent names, emails and phone numbers from the source listings are deliberately NOT here: they are third-party personal data and must never be published on the site.",
+  "christiesrealestate-com-1": {
+    "title": "The Powder House",
+    "location": "Aspen, CO",
+    "note": "$62,000,000 · 9 bed · 12 bath · 9,768 sqft"
+  },
+  "christiesrealestate-com-2": {
+    "location": "Aspen, CO",
+    "note": "$48,900,000 · 7 bed · 15,000 sqft"
+  },
+  "christiesrealestate-com-3": {
+    "title": "The Mineshaft",
+    "location": "Breckenridge, CO",
+    "note": "$14,995,000 · 7 bed · ski-in/ski-out"
+  },
+  "christiesrealestate-com-4": {
+    "location": "Snowmass Village, CO",
+    "note": "From $2,050,000 · ski resort residences"
+  },
+  "christiesrealestate-com-5": {
+    "location": "Castle Rock, CO",
+    "note": "$1,285,000 · 4 bed · new build"
+  },
+  "sothebysrealty-com-eng-1": {
+    "title": "Four Seasons Private Residences",
+    "location": "Saadiyat Island, Abu Dhabi",
+    "note": "Beachfront island residences"
+  },
+  "sothebysrealty-com-eng-2": {
+    "location": "Cologny, Geneva",
+    "note": "Lake Geneva estate"
+  },
+  "sothebysrealty-com-eng-3": {
+    "title": "Rendezvous Bay",
+    "location": "West End, Anguilla",
+    "note": "New-build beachfront villa"
+  },
+  "sothebysrealty-com-eng-4": {
+    "title": "59–61 Wolseley Road",
+    "location": "Point Piper, Sydney",
+    "note": "Sydney Harbour trophy apartment"
+  },
+  "sothebysrealty-com-eng-5": {
+    "title": "Beau Champ",
+    "location": "Flacq, Mauritius",
+    "note": "Indian Ocean estate"
+  },
+  "mansionglobal-com-1": {
+    "location": "Pacific Heights, San Francisco",
+    "note": "Luxury townhouse"
+  },
+  "mansionglobal-com-2": {
+    "location": "Miami Beach, FL",
+    "note": "Biscayne Bay waterfront"
+  },
+  "mansionglobal-com-3": {
+    "location": "River Oaks, Houston",
+    "note": "Estate home"
+  },
+  "mansionglobal-com-4": {
+    "location": "Hollywood Hills, Los Angeles",
+    "note": "Hills residence"
+  },
+  "mansionglobal-com-5": {
+    "location": "Darling Point, Sydney",
+    "note": "Harbour waterfront"
+  },
+  "coldwellbankerluxury-com-3": {
+    "location": "Upper East Side, New York",
+    "note": "Penthouse"
+  },
+  "coldwellbankerluxury-com-4": {
+    "location": "Park Avenue, New York",
+    "note": "Upper East Side apartment"
+  },
+  "coldwellbankerluxury-com-5": {
+    "location": "Aspen, CO",
+    "note": "Aspen Mountain address"
+  },
+  "domain-com-au-1": {
+    "location": "Toorak, Melbourne",
+    "note": "Melbourne's most exclusive suburb"
+  },
+  "domain-com-au-3": {
+    "location": "Melbourne CBD",
+    "note": "High-rise city apartment"
+  },
+  "domain-com-au-5": {
+    "location": "Sydney CBD",
+    "note": "City apartment"
+  },
+  "nigeriapropertycentre-com-1": {
+    "title": "Semi-detached house with BQ",
+    "location": "Lekki Phase 1, Lagos",
+    "note": "4 bed · 4 bath"
+  },
+  "nigeriapropertycentre-com-2": {
+    "title": "Terrace duplex with pool",
+    "location": "Oniru, Victoria Island, Lagos",
+    "note": "4 bed · 4 bath · swimming pool"
+  },
+  "nigeriapropertycentre-com-3": {
+    "title": "Spacious apartment",
+    "location": "Off Admiralty Way, Lekki, Lagos",
+    "note": "2 bed · 2 bath"
+  },
+  "nigeriapropertycentre-com-4": {
+    "title": "Duplex with BQ",
+    "location": "Jim Estate, Wuye, Abuja",
+    "note": "5 bed · 6 bath"
+  },
+  "nigeriapropertycentre-com-5": {
+    "title": "Terraced duplex with BQ",
+    "location": "Utako, Abuja",
+    "note": "4 bed · newly built"
+  },
+  "pamgolding-co-za-1": {
+    "location": "Zimbali Estate, KwaZulu-Natal",
+    "note": "Coastal estate"
+  },
+  "pamgolding-co-za-2": {
+    "location": "Albemarle, Johannesburg",
+    "note": "Residential"
+  },
+  "pamgolding-co-za-3": {
+    "location": "Steyn City, Midrand",
+    "note": "Golf estate, multi-storey"
+  },
+  "pamgolding-co-za-4": {
+    "location": "Hyde Park, Sandton",
+    "note": "Africa's richest square mile"
+  },
+  "pamgolding-co-za-5": {
+    "location": "Wesbank, Oudtshoorn",
+    "note": "Karoo double-storey"
+  },
+  "propertyfinder-ae-1": {
+    "location": "Airport Road, Abu Dhabi",
+    "note": "1 bed · utilities included",
+    "title": "Airport Road residence"
+  },
+  "propertyfinder-ae-2": {
+    "location": "Dubai",
+    "note": "Hotel apartment near metro"
+  },
+  "propertyfinder-ae-3": {
+    "location": "Madinat Jumeirah, Dubai",
+    "note": "Burj Al Arab view"
+  },
+  "propertyfinder-ae-4": {
+    "location": "Business Bay, Dubai",
+    "note": "Canal, pool and Burj Khalifa views"
+  },
+  "propertyfinder-ae-5": {
+    "location": "City Walk, Dubai",
+    "note": "Burj Khalifa and boulevard view"
+  },
+  "bayut-com-ae-1": {
+    "location": "Dubai",
+    "note": "High floor · full park view",
+    "title": "High floor, full park view"
+  },
+  "bayut-com-ae-2": {
+    "location": "Dubai",
+    "note": "Pool view · vacant",
+    "title": "Pool view, vacant"
+  },
+  "bayut-com-ae-3": {
+    "location": "Dubai",
+    "note": "Pool view · exclusive",
+    "title": "Pool view residence"
+  },
+  "bayut-com-ae-4": {
+    "location": "Dubai",
+    "note": "Boulevard facing · unfurnished",
+    "title": "Boulevard facing"
+  },
+  "bayut-com-ae-5": {
+    "location": "Dubai",
+    "note": "Vacant · motivated seller",
+    "title": "Vacant, ready to move"
+  },
+  "realestate-com-au-2": {
+    "location": "Turner, Canberra"
+  },
+  "realestate-com-au-3": {
+    "location": "Tarneit, Melbourne"
+  },
+  "zillow-com-us-1": {
+    "note": "New construction · master-planned"
+  }
+}

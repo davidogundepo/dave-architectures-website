@@ -1,0 +1,309 @@
+{
+  "bayut-com-ae-1": {
+    "title": "High floor, full park view",
+    "location": "Dubai",
+    "note": "High floor · full park view"
+  },
+  "bayut-com-ae-2": {
+    "title": "Pool view, vacant",
+    "location": "Dubai",
+    "note": "Pool view · vacant"
+  },
+  "bayut-com-ae-3": {
+    "title": "Pool view residence",
+    "location": "Dubai",
+    "note": "Pool view · exclusive"
+  },
+  "bayut-com-ae-4": {
+    "title": "Boulevard facing",
+    "location": "Dubai",
+    "note": "Boulevard facing · unfurnished"
+  },
+  "bayut-com-ae-5": {
+    "title": "Vacant, ready to move",
+    "location": "Dubai",
+    "note": "Vacant · motivated seller"
+  },
+  "christiesrealestate-com-1": {
+    "title": "The Powder House",
+    "location": "Aspen, CO",
+    "note": "$62,000,000 · 9 bed · 12 bath · 9,768 sqft"
+  },
+  "christiesrealestate-com-2": {
+    "title": "1518 W Buttermilk Road",
+    "location": "Aspen, CO",
+    "note": "$48,900,000 · 7 bed · 15,000 sqft"
+  },
+  "christiesrealestate-com-3": {
+    "title": "The Mineshaft",
+    "location": "Breckenridge, CO",
+    "note": "$14,995,000 · 7 bed · ski-in/ski-out"
+  },
+  "christiesrealestate-com-4": {
+    "title": "855 Carriage Way",
+    "location": "Snowmass Village, CO",
+    "note": "From $2,050,000 · ski resort residences"
+  },
+  "christiesrealestate-com-5": {
+    "title": "5910 Riesberg Lane",
+    "location": "Castle Rock, CO",
+    "note": "$1,285,000 · 4 bed · new build"
+  },
+  "coldwellbankerluxury-com-1": {
+    "title": "6731 E Fm 1123",
+    "location": "Belton, TX"
+  },
+  "coldwellbankerluxury-com-2": {
+    "title": "714 Hampton Hill Road",
+    "location": "Columbia, SC"
+  },
+  "coldwellbankerluxury-com-3": {
+    "title": "157 E 84th Street Unit PH",
+    "location": "Upper East Side, New York",
+    "note": "Penthouse"
+  },
+  "coldwellbankerluxury-com-4": {
+    "title": "784 Park Avenue Unit 14C",
+    "location": "Park Avenue, New York",
+    "note": "Upper East Side apartment"
+  },
+  "coldwellbankerluxury-com-5": {
+    "title": "1212 Hopkins Avenue",
+    "location": "Aspen, CO",
+    "note": "Aspen Mountain address"
+  },
+  "domain-com-au-1": {
+    "title": "5 Myoora Road",
+    "location": "Toorak, Melbourne",
+    "note": "Melbourne's most exclusive suburb"
+  },
+  "domain-com-au-2": {
+    "title": "10 Tollington Avenue",
+    "location": "Malvern East, VIC"
+  },
+  "domain-com-au-3": {
+    "title": "318 Little Lonsdale Street",
+    "location": "Melbourne CBD",
+    "note": "High-rise city apartment"
+  },
+  "domain-com-au-4": {
+    "title": "185 Morphett Street",
+    "location": "Adelaide, SA"
+  },
+  "domain-com-au-5": {
+    "title": "18 Loftus Street",
+    "location": "Sydney CBD",
+    "note": "City apartment"
+  },
+  "mansionglobal-com-1": {
+    "title": "1904 Leavenworth St",
+    "location": "Pacific Heights, San Francisco",
+    "note": "Luxury townhouse"
+  },
+  "mansionglobal-com-2": {
+    "title": "535 N Shore Drive",
+    "location": "Miami Beach, FL",
+    "note": "Biscayne Bay waterfront"
+  },
+  "mansionglobal-com-3": {
+    "title": "4 West Ln",
+    "location": "River Oaks, Houston",
+    "note": "Estate home"
+  },
+  "mansionglobal-com-4": {
+    "title": "8428 Hollywood Boulevard",
+    "location": "Hollywood Hills, Los Angeles",
+    "note": "Hills residence"
+  },
+  "mansionglobal-com-5": {
+    "title": "82 New Beach Road",
+    "location": "Darling Point, Sydney",
+    "note": "Harbour waterfront"
+  },
+  "nigeriapropertycentre-com-1": {
+    "title": "Semi-detached house with BQ",
+    "location": "Lekki Phase 1, Lagos",
+    "note": "4 bed · 4 bath"
+  },
+  "nigeriapropertycentre-com-2": {
+    "title": "Terrace duplex with pool",
+    "location": "Oniru, Victoria Island, Lagos",
+    "note": "4 bed · 4 bath · swimming pool"
+  },
+  "nigeriapropertycentre-com-3": {
+    "title": "Spacious apartment",
+    "location": "Off Admiralty Way, Lekki, Lagos",
+    "note": "2 bed · 2 bath"
+  },
+  "nigeriapropertycentre-com-4": {
+    "title": "Duplex with BQ",
+    "location": "Jim Estate, Wuye, Abuja",
+    "note": "5 bed · 6 bath"
+  },
+  "nigeriapropertycentre-com-5": {
+    "title": "Terraced duplex with BQ",
+    "location": "Utako, Abuja",
+    "note": "4 bed · newly built"
+  },
+  "pamgolding-co-za-1": {
+    "title": "Zimbali Estate",
+    "location": "Zimbali Estate, KwaZulu-Natal",
+    "note": "Coastal estate"
+  },
+  "pamgolding-co-za-2": {
+    "title": "Albemarle",
+    "location": "Albemarle, Johannesburg",
+    "note": "Residential"
+  },
+  "pamgolding-co-za-3": {
+    "title": "Steyn City",
+    "location": "Steyn City, Midrand",
+    "note": "Golf estate, multi-storey"
+  },
+  "pamgolding-co-za-4": {
+    "title": "Hyde Park, Sandton",
+    "location": "Hyde Park, Sandton",
+    "note": "Africa's richest square mile"
+  },
+  "pamgolding-co-za-5": {
+    "title": "Wesbank, Oudtshoorn",
+    "location": "Wesbank, Oudtshoorn",
+    "note": "Karoo double-storey"
+  },
+  "propertyfinder-ae-1": {
+    "title": "Airport Road residence",
+    "location": "Airport Road, Abu Dhabi",
+    "note": "1 bed · utilities included"
+  },
+  "propertyfinder-ae-2": {
+    "title": "Grand Belle Vue Hotel Apartment",
+    "location": "Dubai",
+    "note": "Hotel apartment near metro"
+  },
+  "propertyfinder-ae-3": {
+    "title": "Lamtara 1",
+    "location": "Madinat Jumeirah, Dubai",
+    "note": "Burj Al Arab view"
+  },
+  "propertyfinder-ae-4": {
+    "title": "Damac Maison Prive B",
+    "location": "Business Bay, Dubai",
+    "note": "Canal, pool and Burj Khalifa views"
+  },
+  "propertyfinder-ae-5": {
+    "title": "City Walk Residential Building 9",
+    "location": "City Walk, Dubai",
+    "note": "Burj Khalifa and boulevard view"
+  },
+  "realestate-com-au-1": {
+    "title": "135 A'Beckett Street",
+    "location": "Melbourne, VIC"
+  },
+  "realestate-com-au-2": {
+    "title": "3 Towns Crescent",
+    "location": "Turner, Canberra"
+  },
+  "realestate-com-au-3": {
+    "title": "2 Rosebud Street",
+    "location": "Tarneit, Melbourne"
+  },
+  "realestate-com-au-4": {
+    "title": "222 Margaret Street",
+    "location": "Brisbane City, QLD"
+  },
+  "realestate-com-au-5": {
+    "title": "80 Milligan Street",
+    "location": "Perth, WA"
+  },
+  "rightmove-co-uk-1": {
+    "title": "Lisvane, Cardiff",
+    "location": "Cardiff",
+    "note": "4 bed detached house"
+  },
+  "rightmove-co-uk-2": {
+    "title": "Avenue Road, St Johns Wood",
+    "location": "London",
+    "note": "10 bed house"
+  },
+  "rightmove-co-uk-3": {
+    "title": "Hans Place, Knightsbridge",
+    "location": "London",
+    "note": "6 bed flat"
+  },
+  "rightmove-co-uk-4": {
+    "title": "Manresa Road, Knightsbridge",
+    "location": "London",
+    "note": "6 bed penthouse"
+  },
+  "rightmove-co-uk-5": {
+    "title": "Hollybush Road, Cyncoed",
+    "location": "Cardiff",
+    "note": "5 bed detached house"
+  },
+  "savills-co-uk-1": {
+    "title": "Offord Road, Graveley",
+    "location": "St. Neots, Cambridgeshire"
+  },
+  "savills-co-uk-2": {
+    "title": "Rook Lane, Chaldon",
+    "location": "Caterham"
+  },
+  "savills-co-uk-3": {
+    "title": "Coombe Park, Kingston upon Thames",
+    "location": "Surrey"
+  },
+  "savills-co-uk-4": {
+    "title": "Wilmslow Park South, Wilmslow",
+    "location": "Cheshire"
+  },
+  "savills-co-uk-5": {
+    "title": "Kirkdale Estate Lodges, Carsluith",
+    "location": "Dumfries and Galloway"
+  },
+  "sothebysrealty-com-eng-1": {
+    "title": "Four Seasons Private Residences",
+    "location": "Saadiyat Island, Abu Dhabi",
+    "note": "Beachfront island residences"
+  },
+  "sothebysrealty-com-eng-2": {
+    "title": "Cologny",
+    "location": "Cologny, Geneva",
+    "note": "Lake Geneva estate"
+  },
+  "sothebysrealty-com-eng-3": {
+    "title": "Rendezvous Bay",
+    "location": "West End, Anguilla",
+    "note": "New-build beachfront villa"
+  },
+  "sothebysrealty-com-eng-4": {
+    "title": "59–61 Wolseley Road",
+    "location": "Point Piper, Sydney",
+    "note": "Sydney Harbour trophy apartment"
+  },
+  "sothebysrealty-com-eng-5": {
+    "title": "Beau Champ",
+    "location": "Flacq, Mauritius",
+    "note": "Indian Ocean estate"
+  },
+  "zillow-com-us-1": {
+    "title": "Paramount by D.R. Horton",
+    "location": "Kyle, TX",
+    "note": "New construction · master-planned"
+  },
+  "zillow-com-us-2": {
+    "title": "1620 W 47th St SW",
+    "location": "Calgary, AB"
+  },
+  "zillow-com-us-3": {
+    "title": "5012 E Belmont Ave",
+    "location": "Fresno, CA"
+  },
+  "zillow-com-us-4": {
+    "title": "112 Myrtlewood Ln",
+    "location": "Hendersonville, TN"
+  },
+  "zillow-com-us-5": {
+    "title": "361 W 11th Ave",
+    "location": "Vancouver, BC"
+  }
+}
