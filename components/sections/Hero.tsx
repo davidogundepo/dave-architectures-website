@@ -81,6 +81,7 @@ export default function Hero() {
                   priority
                   fill
                   hd
+                  warm
                   rounded={false}
                   className="h-full w-full"
                 >
