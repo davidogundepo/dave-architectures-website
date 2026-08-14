@@ -49,6 +49,21 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     type: 'website',
+    locale: 'en_GB',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dave Architectures — stills in, film out',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${SITE.name} — Property films from still photographs`,
+    description: SITE.tagline,
+    images: ['/og-image.jpg'],
   },
 };
 

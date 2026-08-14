@@ -57,19 +57,23 @@ export default function Numbers() {
           </h2>
         </div>
 
-        <div className="relative mt-20 grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 lg:grid-cols-5 lg:gap-x-6">
+        {/* Cards sit at staggered heights, each dropping a hairline stem to a
+            ticked baseline — the chart-annotation look from the reference. */}
+        <div className="relative mt-20 grid grid-cols-2 items-end gap-x-4 gap-y-12 md:grid-cols-3 lg:grid-cols-5 lg:gap-x-6">
           {figures.map((figure) => (
             <Figure key={figure.label} {...figure} />
           ))}
 
-          {/* The baseline the stems drop onto. */}
-          <div
-            className="pointer-events-none absolute inset-x-0 -bottom-6 hidden h-px lg:block"
-            style={{
-              backgroundImage:
-                'repeating-linear-gradient(90deg, var(--line-night) 0 1px, transparent 1px 14px)',
-            }}
-          />
+          <div className="pointer-events-none absolute inset-x-0 -bottom-px hidden lg:block">
+            <div className="h-px w-full bg-[var(--line-night)]" />
+            <div
+              className="h-2 w-full"
+              style={{
+                backgroundImage:
+                  'repeating-linear-gradient(90deg, var(--line-night) 0 1px, transparent 1px 16px)',
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -87,9 +91,7 @@ function Figure({
   const inView = useInView(ref, { rootMargin: '-10% 0px' });
 
   return (
-    <div ref={ref} className="relative flex flex-col">
-      <div style={{ paddingBottom: `calc(${lift} * 1.5rem)` }} className="lg:block hidden" />
-
+    <div ref={ref} className="flex flex-col">
       <div className="rounded-[var(--radius)] border border-[var(--line-night)] bg-[var(--night-2)] p-5">
         <p className="display text-[clamp(2.6rem,5vw,4.6rem)] leading-[0.85] text-[var(--accent)]">
           <Count to={value} run={inView} />
@@ -99,10 +101,17 @@ function Figure({
         <p className="mt-1.5 text-sm leading-snug text-[var(--on-night-2)]">{note}</p>
       </div>
 
-      {/* Stem down to the baseline, echoing the reference chart. */}
-      <div className="relative hidden flex-1 justify-center lg:flex">
+      {/*
+        The stem. `lift` is how far above the baseline this card floats, so a
+        taller lift means a longer line down to it. Column direction matters —
+        in a row, flex-1 would stretch the hairline sideways into a slab.
+      */}
+      <div
+        className="hidden flex-col items-center lg:flex"
+        style={{ height: `calc(1.75rem + ${lift} * 1.6rem)` }}
+      >
         <span className="w-px flex-1 bg-[var(--line-night)]" />
-        <span className="absolute -bottom-[3px] h-1.5 w-1.5 rounded-full bg-[var(--on-night-2)]" />
+        <span className="h-1.5 w-1.5 shrink-0 translate-y-[3px] rounded-full bg-[var(--on-night-2)]" />
       </div>
     </div>
   );

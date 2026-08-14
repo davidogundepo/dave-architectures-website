@@ -6,7 +6,7 @@ import FilmFrame from '@/components/media/FilmFrame';
 import { getBrand } from '@/lib/brands';
 import { displayLocation, displayTitle, pickDiverse, portraitClips, stats } from '@/lib/videos';
 
-const reel = pickDiverse(portraitClips, 5);
+const reel = pickDiverse(portraitClips, 3);
 
 export default function Hero() {
   const [active, setActive] = useState<number | null>(null);
@@ -57,34 +57,30 @@ export default function Hero() {
       {/* The accordion: five 9:16 cuts that stretch toward 16:9 as you hover,
           which is also the moment the film starts. */}
       <div className="shell mt-16 sm:mt-20">
+        {/* Three frames butted together. Idle, they share the width equally;
+            hovering one pushes it wide and squeezes the other two. */}
         <div
-          className="flex h-[clamp(300px,48vh,560px)] items-stretch gap-2 sm:gap-3"
+          className="flex h-[clamp(320px,52vh,600px)] items-stretch gap-[2px] overflow-hidden"
           onMouseLeave={() => setActive(null)}
         >
           {reel.map((clip, i) => {
             const isActive = active === i;
             const brand = getBrand(clip.brandId);
-            // Staggered rest heights so the row reads as a scattered set rather
-            // than a filmstrip; hovering pulls the active frame back to full.
-            const stagger = [0, 3.5, 1.5, 5, 1][i % 5];
 
             return (
               <div
                 key={clip.id}
                 onMouseEnter={() => setActive(i)}
-                className="relative min-w-0 transition-[flex-grow,padding] duration-[700ms] ease-[var(--ease)]"
-                style={{
-                  flexGrow: isActive ? 3.4 : 1,
-                  flexBasis: 0,
-                  paddingBlock: isActive ? 0 : `${stagger}%`,
-                }}
+                className="relative min-w-0 transition-[flex-grow] duration-[700ms] ease-[var(--ease)]"
+                style={{ flexGrow: isActive ? 2.6 : 1, flexBasis: 0 }}
               >
                 <FilmFrame
                   clip={clip}
                   trigger="hover"
                   scrim
-                  priority={i < 3}
+                  priority
                   fill
+                  rounded={false}
                   className="h-full w-full"
                 >
                   <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 p-4 sm:p-6">
