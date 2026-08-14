@@ -3,6 +3,7 @@ export const SITE = {
   tagline: 'Property films made from the photographs you already have.',
   url: 'https://dave-architectures.web.app',
   email: 'david@nouvellesoft.com.ng',
+  whatsapp: { href: 'https://wa.me/2347079693500', display: '+234 707 969 3500' },
   social: [
     { label: 'Instagram', href: 'https://instagram.com/dave.architectures' },
     { label: 'TikTok', href: 'https://tiktok.com/@dave.architectures' },
