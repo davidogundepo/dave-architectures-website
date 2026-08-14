@@ -2,11 +2,12 @@
 Build every web asset from the local masters in ../Property Assets.
 
 The masters are 27 Mbps 1440p exports, 100-270 MB each. Nothing that heavy goes
-near a browser. For each clip this produces three things:
+near a browser. For each clip this produces four things:
 
-  posters/<slug>.jpg   ~80 KB   layout + first paint
-  preview/<slug>.mp4   ~0.5 MB  10s silent loop, this is what autoplays in grids
-  web/<slug>.mp4       ~8-14 MB full film, only fetched when someone opens it
+  posters/<slug>.jpg     ~110 KB  layout + first paint
+  preview/<slug>.mp4     ~0.3 MB  480p silent loop, what grids autoplay
+  preview-hd/<slug>.mp4  ~1.7 MB  720p loop for frames shown large (the hero)
+  web/<slug>.mp4         ~8-14 MB full film, only fetched when someone opens it
 
 It also reads the saved listing page in each folder — the filename is the real
 estate ad's own title — and turns it into the property name and location shown
@@ -30,6 +31,7 @@ ASSETS = os.path.abspath(os.path.join(ROOT, "..", "Property Assets"))
 POSTER_DIR = os.path.join(ROOT, "public", "posters")
 DERIV_DIR = os.path.join(ROOT, ".media")  # git-ignored staging, uploaded separately
 PREVIEW_DIR = os.path.join(DERIV_DIR, "preview")
+PREVIEW_HD_DIR = os.path.join(DERIV_DIR, "preview-hd")
 WEB_DIR = os.path.join(DERIV_DIR, "web")
 CAPTIONS = os.path.join(ROOT, "lib", "captions.json")
 OVERRIDES = os.path.join(ROOT, "lib", "captions.overrides.json")
@@ -40,6 +42,8 @@ POSTERS_ONLY = "--posters" in sys.argv
 CAPTIONS_ONLY = "--captions" in sys.argv
 # Rebuild only the clips that have black bars to crop away.
 ONLY_CROPPED = "--only-cropped" in sys.argv
+# Only (re)build the HD hero previews.
+HD_ONLY = "--hd-only" in sys.argv
 
 PREVIEW_START = 4.0   # skip the burned-in title card
 PREVIEW_LEN = 10.0
@@ -295,11 +299,31 @@ def build(job: dict) -> dict | None:
 
     poster = os.path.join(POSTER_DIR, f"{slug}.jpg")
     preview = os.path.join(PREVIEW_DIR, f"{slug}.mp4")
+    preview_hd = os.path.join(PREVIEW_HD_DIR, f"{slug}.mp4")
     web = os.path.join(WEB_DIR, f"{slug}.mp4")
 
     poster_scale = fit(crop, 720, 1280) if portrait else fit(crop, 1280, 720)
     preview_scale = fit(crop, 480, 854) if portrait else fit(crop, 854, 480)
+    hd_scale = fit(crop, 720, 1280) if portrait else fit(crop, 1280, 720)
     web_scale = fit(crop, 720, 1280) if portrait else fit(crop, 1280, 720)
+
+    # The hero blows a frame up to ~870px wide on hover, where the 480px grid
+    # preview upscales 1.8x and turns to mush. This one is native size there.
+    if HD_ONLY or FORCE or not os.path.exists(preview_hd):
+        run([
+            "ffmpeg", "-y", "-v", "error",
+            "-ss", str(PREVIEW_START), "-t", str(PREVIEW_LEN), "-i", src,
+            "-an", "-c:v", "libx264", "-preset", "slow", "-crf", "25",
+            "-maxrate", "2600k", "-bufsize", "5200k",
+            "-vf", f"{hd_scale},fps=25",
+            "-pix_fmt", "yuv420p", "-profile:v", "high",
+            "-movflags", "+faststart", preview_hd,
+        ])
+
+    if HD_ONLY:
+        kb = os.path.getsize(preview_hd) // 1024 if os.path.exists(preview_hd) else 0
+        print(f"  {slug:<28} hd {kb:>5}K")
+        return {"slug": slug, "hd": kb}
 
     if FORCE or not os.path.exists(poster):
         # Let ffmpeg choose the most representative frame of the window rather
@@ -343,7 +367,7 @@ def build(job: dict) -> dict | None:
 
 
 def main():
-    for d in (POSTER_DIR, PREVIEW_DIR, WEB_DIR):
+    for d in (POSTER_DIR, PREVIEW_DIR, PREVIEW_HD_DIR, WEB_DIR):
         os.makedirs(d, exist_ok=True)
 
     overrides = {}

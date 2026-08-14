@@ -81,7 +81,8 @@ def main():
             unknown.add(m.group("portal"))
             continue
 
-        src = uploads.get(slug, {}).get("url")
+        record = uploads.get(slug, {})
+        src = record.get("url")
         if not src:
             no_video.append(slug)
 
@@ -95,6 +96,7 @@ def main():
             "orientation": "landscape" if index <= 2 else "portrait",
             "src": src,
             "preview": f"/preview/{slug}.mp4" if slug in previews else None,
+            "previewHd": record.get("previewHd"),
             "poster": f"/posters/{slug}.jpg",
             "title": caption.get("title"),
             "location": caption.get("location"),
@@ -124,7 +126,7 @@ def main():
             f"    orientation: {ts(c['orientation'])},",
             f"    src: {ts(c['src'] or '')},",
         ]
-        for key in ("preview", "poster", "title", "location", "note"):
+        for key in ("preview", "previewHd", "poster", "title", "location", "note"):
             if c[key]:
                 fields.append(f"    {key}: {ts(c[key])},")
         lines.append("  {\n" + "\n".join(fields) + "\n  },")

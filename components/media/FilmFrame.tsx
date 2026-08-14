@@ -21,6 +21,8 @@ interface Props {
   fill?: boolean;
   /** Crop to a different ratio than the clip's own, e.g. '4 / 3'. */
   ratio?: string;
+  /** Play the 720p loop instead of the grid one. For frames shown large. */
+  hd?: boolean;
 }
 
 /**
@@ -41,6 +43,7 @@ export default function FilmFrame({
   rounded = true,
   fill = false,
   ratio,
+  hd = false,
 }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -91,7 +94,9 @@ export default function FilmFrame({
 
   const isPortrait = clip.orientation === 'portrait';
   const frameRatio = ratio ?? (isPortrait ? '9 / 16' : '16 / 9');
-  const source = clip.preview ?? clip.src;
+  const source = hd
+    ? clip.previewHd ?? clip.preview ?? clip.src
+    : clip.preview ?? clip.src;
 
   const hoverProps =
     effectiveTrigger === 'hover'

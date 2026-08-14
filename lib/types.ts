@@ -9,8 +9,10 @@ export interface Clip {
   orientation: Orientation;
   /** Full web-weight cut on Firebase Storage (~10–15 MB). Loaded on demand. */
   src: string;
-  /** ~0.5 MB silent 10s loop served from /public. This is what grids autoplay. */
+  /** ~0.3 MB silent 10s loop served from /public. This is what grids autoplay. */
   preview?: string;
+  /** 720p silent loop for the few places a frame is shown large (the hero). */
+  previewHd?: string;
   poster?: string;
   width?: number;
   height?: number;

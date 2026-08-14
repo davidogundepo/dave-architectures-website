@@ -80,6 +80,7 @@ export default function Hero() {
                   scrim
                   priority
                   fill
+                  hd
                   rounded={false}
                   className="h-full w-full"
                 >

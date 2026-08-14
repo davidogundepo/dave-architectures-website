@@ -27,7 +27,7 @@ export const SITE = {
     },
     {
       label: 'Nouvellesoft',
-      note: 'The parent software studio',
+      note: 'The digital yearbook app',
       href: 'https://nouvellesoft.com.ng',
       live: true,
     },
