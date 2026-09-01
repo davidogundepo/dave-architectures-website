@@ -17,7 +17,7 @@ export const SITE = {
     {
       label: 'Dave Websites',
       note: 'Websites & digital products',
-      href: 'https://dave-digitals.web.app',
+      href: 'https://dave-websites.web.app',
       live: true,
     },
     {
