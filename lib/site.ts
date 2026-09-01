@@ -15,7 +15,7 @@ export const SITE = {
    */
   sister: [
     {
-      label: 'Dave Digitals',
+      label: 'Dave Websites',
       note: 'Websites & digital products',
       href: 'https://dave-digitals.web.app',
       live: true,
@@ -24,7 +24,7 @@ export const SITE = {
       label: 'Dave Studio',
       note: 'AI portrait & graduation shoots',
       href: 'https://dave-studio.web.app',
-      live: false,
+      live: true,
     },
     {
       label: 'Nouvellesoft',
