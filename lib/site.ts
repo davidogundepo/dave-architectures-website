@@ -16,7 +16,7 @@ export const SITE = {
   sister: [
     {
       label: 'Dave Websites',
-      note: 'Websites & digital products',
+      note: 'Websites, web apps & dashboards',
       href: 'https://dave-websites.web.app',
       live: true,
     },
