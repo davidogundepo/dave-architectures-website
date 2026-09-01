@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { SITE } from '@/lib/site';
+import { SITE, mailHref, waHref } from '@/lib/site';
 
 const columns = [
   {
@@ -63,7 +63,7 @@ export default function Footer() {
             </p>
 
             <a
-              href={`mailto:${SITE.email}`}
+              href={mailHref()}
               data-cursor="Write"
               className="display mt-8 inline-block break-all text-[clamp(1.15rem,2.2vw,1.9rem)] leading-none underline decoration-[var(--accent)] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[var(--accent)]"
             >
@@ -71,7 +71,7 @@ export default function Footer() {
             </a>
 
             <a
-              href={SITE.whatsapp.href}
+              href={waHref()}
               target="_blank"
               rel="noreferrer noopener"
               data-cursor="Message"
@@ -151,17 +151,27 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-7">
-            {SITE.social.map((s) => (
-              <a
-                key={s.label}
-                href={s.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="label text-[var(--on-night-2)] transition-colors duration-300 hover:text-[var(--accent)]"
-              >
-                {s.label}
-              </a>
-            ))}
+            {SITE.social.map((s) =>
+              s.href ? (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="label text-[var(--on-night-2)] transition-colors duration-300 hover:text-[var(--accent)]"
+                >
+                  {s.label}
+                </a>
+              ) : (
+                <span
+                  key={s.label}
+                  aria-disabled="true"
+                  className="label text-[var(--on-night-2)]/40"
+                >
+                  {s.label}
+                </span>
+              ),
+            )}
           </div>
         </div>
       </div>

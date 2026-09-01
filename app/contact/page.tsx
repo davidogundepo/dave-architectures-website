@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/contact/ContactForm';
 import Reveal from '@/components/ui/Reveal';
-import { SITE } from '@/lib/site';
+import { SITE, mailHref } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -55,7 +55,7 @@ export default function ContactPage() {
             <div className="mt-10">
               <p className="label text-[var(--ink-3)]">Or just write</p>
               <a
-                href={`mailto:${SITE.email}`}
+                href={mailHref()}
                 data-cursor="Write"
                 className="display mt-3 block text-[clamp(1.3rem,2.6vw,2.1rem)] leading-none underline decoration-[var(--accent)] decoration-2 underline-offset-8 transition-colors duration-300 hover:text-[var(--accent)]"
               >
@@ -63,17 +63,23 @@ export default function ContactPage() {
               </a>
 
               <div className="mt-7 flex gap-6">
-                {SITE.social.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="label text-[var(--ink-3)] transition-colors hover:text-[var(--accent)]"
-                  >
-                    {s.label}
-                  </a>
-                ))}
+                {SITE.social.map((s) =>
+                  s.href ? (
+                    <a
+                      key={s.label}
+                      href={s.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="label text-[var(--ink-3)] transition-colors hover:text-[var(--accent)]"
+                    >
+                      {s.label}
+                    </a>
+                  ) : (
+                    <span key={s.label} aria-disabled="true" className="label text-[var(--ink-3)]/40">
+                      {s.label}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>

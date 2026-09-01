@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Reveal from '@/components/ui/Reveal';
-import { SITE } from '@/lib/site';
+import { SITE, mailHref } from '@/lib/site';
 
 export default function CallToAction() {
   return (
@@ -31,7 +31,7 @@ export default function CallToAction() {
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
           <a
-            href={`mailto:${SITE.email}`}
+            href={mailHref()}
             data-cursor="Write"
             className="label inline-flex items-center border-b border-[var(--ink)] pb-1 transition-colors duration-300 hover:border-[var(--accent)] hover:text-[var(--accent)]"
           >
