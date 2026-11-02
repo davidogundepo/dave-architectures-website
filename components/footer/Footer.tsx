@@ -147,7 +147,15 @@ export default function Footer() {
 
         <div className="mt-16 flex flex-col gap-5 border-t border-[var(--line-night)] pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="label text-[var(--on-night-2)]">
-            © {new Date().getFullYear()} Dave Architectures
+            © {new Date().getFullYear()} Dave Architectures · Built by{' '}
+            <a
+              href="https://davidogundepo.web.app"
+              target="_blank"
+              rel="noopener"
+              className="text-[var(--on-night)] transition-colors duration-300 hover:text-[var(--accent)]"
+            >
+              David Ogundepo ↗
+            </a>
           </p>
 
           <div className="flex gap-7">
